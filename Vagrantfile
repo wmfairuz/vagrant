@@ -14,11 +14,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--name", "Java-Dev-Machine"]
-    vb.customize ["modifyvm", :id, "--memory", "512"]
-    vb.customize ["modifyvm", :id, "--cpus", "1"]
+    vb.customize ["modifyvm", :id, "--memory", "1024"]
+    vb.customize ["modifyvm", :id, "--cpus", "2"]
     vb.customize ["modifyvm", :id, "--ioapic", "on"]
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", "100"]
     vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
-  # vb.gui = true
+    vb.gui = true
   end
 end
