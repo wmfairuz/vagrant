@@ -30,4 +30,11 @@ Vagrant.configure("2") do |config|
 
   # Provision Java
   config.vm.provision :shell, :path => "scripts/java.sh", privileged: false
+
+  ####
+  # Databases
+  ##########
+
+  # Provision Neo4J
+  config.vm.provision :shell, :path => "scripts/neo4j.sh", privileged: false
 end
