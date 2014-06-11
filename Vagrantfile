@@ -62,4 +62,7 @@ Vagrant.configure("2") do |config|
   # Provision Play! Framework
   config.vm.provision :shell, :path => "scripts/play.sh", privileged: false
 
+  # Provision Eclipse
+  config.vm.provision :shell, :path => "scripts/eclipse.sh", privileged: false
+
 end
