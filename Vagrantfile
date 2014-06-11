@@ -28,4 +28,6 @@ Vagrant.configure("2") do |config|
   # Provision Base Packages
   config.vm.provision :shell, :path => "scripts/base.sh", privileged: false
 
+  # Provision Java
+  config.vm.provision :shell, :path => "scripts/java.sh", privileged: false
 end
