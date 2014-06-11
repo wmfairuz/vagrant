@@ -1,6 +1,16 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+nodejs_version        = "latest" # By default "latest" will equal the latest stable version
+nodejs_packages       = [  		 # List any global NodeJS packages that you want to install
+  "less",
+  "grunt-cli",
+  "bower",
+  "yo",
+  "generator-webapp",
+  "generator-angular"
+]
+
 Vagrant.configure("2") do |config|
   # Set server to Debian 7.4
   config.vm.box = "wheezy74"
@@ -37,4 +47,12 @@ Vagrant.configure("2") do |config|
 
   # Provision Neo4J
   config.vm.provision :shell, :path => "scripts/neo4j.sh", privileged: false
+
+  ####
+  # Additional Languages
+  ##########
+
+  # Provision Nodejs
+  config.vm.provision :shell, :path => "scripts/nodejs.sh", privileged: false, args: nodejs_packages
+
 end
