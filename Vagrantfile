@@ -65,4 +65,6 @@ Vagrant.configure("2") do |config|
   # Provision Eclipse
   config.vm.provision :shell, :path => "scripts/eclipse.sh", privileged: false
 
+  # Provision Sublime Text
+  config.vm.provision :shell, :path => "scripts/st3.sh", privileged: false
 end
