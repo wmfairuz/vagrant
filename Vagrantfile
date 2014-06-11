@@ -67,4 +67,11 @@ Vagrant.configure("2") do |config|
 
   # Provision Sublime Text
   config.vm.provision :shell, :path => "scripts/st3.sh", privileged: false
+
+  ####
+  # Browsers
+  ##########
+
+  # Provision Google Chrome
+  config.vm.provision :shell, :path => "scripts/chrome.sh", privileged: false
 end
