@@ -55,4 +55,11 @@ Vagrant.configure("2") do |config|
   # Provision Nodejs
   config.vm.provision :shell, :path => "scripts/nodejs.sh", privileged: false, args: nodejs_packages
 
+  ####
+  # Frameworks and Tooling
+  ##########
+
+  # Provision Play! Framework
+  config.vm.provision :shell, :path => "scripts/play.sh", privileged: false
+
 end
