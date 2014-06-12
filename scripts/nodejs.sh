@@ -20,7 +20,7 @@ else
 fi
 
 # Install (optional) Global Node Packages
-#if [[ ! -z $NODE_PACKAGES ]]; then
-    #echo ">>> Start installing Global Node Packages"
-    #~/node-v0.10.28-linux-x64/bin/npm install -g ${NODE_PACKAGES[@]}
-#fi
+if [[ ! -z $NODE_PACKAGES ]]; then
+    echo ">>> Start installing Global Node Packages"
+    ~/node-v0.10.28-linux-x64/bin/npm install -g --silent ${NODE_PACKAGES[@]}
+fi
