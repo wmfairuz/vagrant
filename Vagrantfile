@@ -41,6 +41,9 @@ Vagrant.configure("2") do |config|
   # Provision Java
   config.vm.provision :shell, :path => "scripts/java.sh", privileged: false
 
+  # Provision Maven
+  config.vm.provision :shell, :path => "scripts/maven.sh", privileged: false
+
   ####
   # Databases
   ##########
